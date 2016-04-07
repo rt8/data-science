@@ -60,7 +60,7 @@ Squash commits.  This means several commits are combined to look like 1 commit s
 $ git reset --soft head~2    #2 is the number of previous commits to squash
 $ git commit -v
 $ git push <remote> <branchName>
-$ git push <remote> +<branchName>    # add "+" symbol to force overwrite of remote git repo
+$ git push <remote> +<branchName>    # add "+" symbol to force overwrite of remote git repo branch
 ```
 
 
