@@ -30,6 +30,8 @@ Frequently used
 $ git checkout -b <newBranchName>   # remember to first checkout master branch
 $ git checkout <branchName>
 $ git checkout -- <filename>
+$ git log -p
+$ git log --oneline
 $ git status
 $ git diff
 $ git diff <fileName>
