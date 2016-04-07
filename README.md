@@ -19,6 +19,35 @@ SELECT TABLE_NAME, `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES where TABLE_
 ```
 
 # Git 
+Frequently
+```bash
+$ git checkout -b <newBranchName>   # remember to first checkout master branch
+$ git checkout <branchName>
+$ git checkout -- <filename>
+$ git status
+$ git diff
+$ git diff <fileName>
+$ git diff --staged
+$ git add <fileName>
+$ git stash
+$ git commit -v 
+$ git remote -v
+$ git push <remoteName> <remoteBranchName>
+$ git pull <remoteName> <remoteBranchName>
+```
+
+Merge branches
+```bash
+$ git checkout -b <newBranch>
+$ git merge <branch1> <branch2>
+$ git diff    #or use git mergetool
+... resolve branch conflicts ...
+$ git add <fileName>
+$ git commit -v
+$ git push <remoteName> <remoteBranchName>
+```
+
+
 
 Squash commits.  This means several commits are combined to look like 1 commit so the code history looks more tidy.
 ```bash
