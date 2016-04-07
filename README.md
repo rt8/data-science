@@ -20,7 +20,7 @@ SELECT TABLE_NAME, `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES where TABLE_
 
 # Git 
 
-Squash commits.  This means several commits are combined too look like 1 commit so the code history looks more tidy.
+Squash commits.  This means several commits are combined to look like 1 commit so the code history looks more tidy.
 ```bash
 $ git reset --soft head~2    #2 is the number of previous commits to squash
 $ git commit -v
