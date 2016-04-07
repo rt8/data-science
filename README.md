@@ -19,7 +19,7 @@ SELECT TABLE_NAME, `AUTO_INCREMENT` FROM  INFORMATION_SCHEMA.TABLES where TABLE_
 ```
 
 # Git 
-Frequently
+Frequently used
 ```bash
 $ git checkout -b <newBranchName>   # remember to first checkout master branch
 $ git checkout <branchName>
@@ -36,12 +36,12 @@ $ git push <remoteName> <remoteBranchName>
 $ git pull <remoteName> <remoteBranchName>
 ```
 
-Merge branches
+Merge branches that have conflicts
 ```bash
 $ git checkout -b <newBranch>
 $ git merge <branch1> <branch2>
 $ git diff    #or use git mergetool
-... resolve branch conflicts ...
+... now proceed to resolve branch conflicts using editor (eg. vim, eclipse, atom)...
 $ git add <fileName>
 $ git commit -v
 $ git push <remoteName> <remoteBranchName>
