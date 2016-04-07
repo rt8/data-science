@@ -11,7 +11,7 @@ Run sql on the command line (eg. in a bash shell script).  This will auto-login 
 
 Load data from csv file into the DB table on the command line (eg. in a bash script).  Note: You can use any field delimiter you like such as pipes ('|') or tabs.
 ```bash
-mysql $MYSQL_ARGS --local-infile -e "LOAD DATA LOCAL INFILE 'csvfile.csv' INTO TABLE <tableNames> FIELDS TERMINATED BY ',' IGNORE 1 LINES;"
+mysql $MYSQL_ARGS --local-infile -e "LOAD DATA LOCAL INFILE 'csvfile.csv' INTO TABLE <tableName> FIELDS TERMINATED BY ',' IGNORE 1 LINES;"
 ```
 
 Delete all data in a table
