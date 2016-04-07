@@ -9,7 +9,7 @@
  $ mysql -u[username] -p[password] -h [host] [database_name] -e "select * from my_table limit 10;"
  ```
 
-Load data from csv file into the DB table on the command line (eg. in a bash script).  Note: You can use any field delimiter you like such as pipes ('|') or tabs.
+**Load data from csv file** into the DB table on the command line (eg. in a bash script).  Note: You can use any field delimiter you like such as pipes ('|') or tabs.
 ```bash
 mysql $MYSQL_ARGS --local-infile -e "LOAD DATA LOCAL INFILE 'csvfile.csv' INTO TABLE <tableName> FIELDS TERMINATED BY ',' IGNORE 1 LINES;"
 ```
@@ -42,7 +42,7 @@ $ git push <remoteName> <remoteBranchName>
 $ git pull <remoteName> <remoteBranchName>
 ```
 
-Merge branches that have conflicts
+**Merge** branches that have conflicts
 ```bash
 $ git checkout -b <newBranch>
 $ git merge <branch1> <branch2>
@@ -55,7 +55,7 @@ $ git push <remoteName> <remoteBranchName>
 
 
 
-Squash commits.  This means several commits are combined to look like 1 commit so the code history looks more tidy.
+**Squash** commits.  This means several commits are combined to look like 1 commit so the code history looks more tidy.
 ```bash
 $ git reset --soft head~2    #2 is the number of previous commits to squash
 $ git commit -v
