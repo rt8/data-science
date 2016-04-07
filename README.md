@@ -2,7 +2,7 @@
 
 # Mysql
 
-Run sql on the command line (eg. in a bash shell script)
+Run sql on the command line (eg. in a bash shell script).  This will auto-login and does not prompt for password which can cause the bash shell script to stall.
 ```bash
  $ mysql $MYSQL_ARGS -e "$SQL_STATEMENT"
  $ mysql -u[username] -p[password] -h [host] [database_name] -e "select * from my_table limit 10;"
