@@ -41,6 +41,7 @@ $ git stash
 $ git commit -v 
 $ git remote -v
 $ git push <remoteName> <remoteBranchName>
+$ git push <remoteName> <localBranchName>:<remoteBranchName>
 $ git pull <remoteName> <remoteBranchName>
 ```
 
