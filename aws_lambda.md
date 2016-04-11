@@ -1,7 +1,7 @@
 # AWS Lambda 
 
 Publish to SNS
-```
+```python
 import boto
 import json
 client = boto3.client('sns')
@@ -19,7 +19,7 @@ print message
 ```
 
 Fetch from SNS
-```
+```python
 import boto
 import json
 def lambda_handler(event, context):
