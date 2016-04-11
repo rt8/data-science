@@ -14,6 +14,8 @@ r = client.publish(
   Message = json.dumps(message),
   MessageStructure='json'
 )
+print message
+# {u'default': u'{"default": "default message", "item": "value"}'}
 ```
 
 Fetch from SNS
@@ -22,5 +24,7 @@ import boto
 import json
 def lambda_handler(event, context):
     jdata = json.loads(event['Records'][0]['Sns']['Message'])
-    print jdata['item']
+    v = jdata['item']
+    print v
+    # "value"
 ```
