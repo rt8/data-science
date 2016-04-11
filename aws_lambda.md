@@ -17,3 +17,10 @@ r = client.publish(
 ```
 
 Fetch from SNS
+```
+import boto
+import json
+def lambda_handler(event, context):
+    jdata = json.loads(event['Records'][0]['Sns']['Message'])
+    print jdata['item']
+```
