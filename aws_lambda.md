@@ -1,6 +1,6 @@
 # AWS Lambda 
 
-Publish to SNS.  This will pass json data to another lambda function that is triggered by SNS subscription.
+Publish message to SNS.  This will pass json data to another lambda function that is triggered by SNS subscription.
 ```python
 import boto
 import json
@@ -18,7 +18,7 @@ print message
 # {u'default': u'{"default": "default message", "item": "value"}'}
 ```
 
-Fetch from SNS
+Fetch message from SNS
 ```python
 import boto
 import json
