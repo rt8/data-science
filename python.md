@@ -19,6 +19,15 @@ def main():
     print str(e)
 ```
 
+JSON
+```python
+# convert string to json 
+jdata = json.loads(aJsonString)
+
+# convert json to string
+print json.dumps(aJsonObject)
+```
+
 # Requests (REST Web Services)
 
 
