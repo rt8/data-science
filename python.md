@@ -5,26 +5,26 @@
 # SQL Alembic
 
 Check the version of current database schema
-```python
+```bash
 $ alembic current
 ```
 
 Check the version of most recent migration script
-```python
+```bash
 $ alembic heads
 ```
 
 Generate migration script
-```python
+```bash
 $ alembic revision autogenerate -m "your message"
 ```
 
 Execute migration script on datbase
-```python
+```bash
 $ alembic upgrade heads
 ```
 
 Reverse changes of migration script
-```python
+```bash
 $ alembic downgrade -1
 ```
