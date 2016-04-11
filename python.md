@@ -1,6 +1,9 @@
 # Python
 
-# Requests
+# Requests (REST Web Services)
+
+
+# SQL Alchemy (Object Relation Mapping)
 
 # SQL Alembic
 
