@@ -1,5 +1,22 @@
 # Python
 
+Error Handling
+```python
+# define your own exceptions for custom handling
+class MyCustomException(Exception):
+  pass
+try: 
+  ... block of code ...
+  raise MyCustomException
+  ...
+except MyCustomException as e:
+  print "something bad happened"
+except KeyError as e:
+  print "missing key in json object or dictionary: %s" % str(e)
+exception Exception as e:
+  print str(e)
+```
+
 # Requests (REST Web Services)
 
 
