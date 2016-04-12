@@ -14,7 +14,19 @@ https://api.address.com/resource \
 ```
 
 #Cron
-
+Cron entry to run every 10 minutes and use flock to ensure only one instance is executed.  Also append logs to output file 
+```
+# run every 10 minutes
+*/10 * * * * flock - n /tmp/lockfile.lock /usr/bin/python script.py >> /var/log/project/logfile.log 2>&1
+```
+Cron commands
+```bash
+crontab -e          # launch text editor to edit crontab
+crontab -l          # show existing cron schedule
+crontab -r          # delete contents of crontab
+crontab <filename>  # Push file contents into crontab.  This will overwrite everything in crontab
+# comments          # add comments to crontab
+```
 
 # Grep
 Find pattern (ignore case) in file and redirect results to another file
