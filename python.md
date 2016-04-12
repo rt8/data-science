@@ -32,7 +32,12 @@ print json.dumps(aJsonObject)
 
 
 # SQL Alchemy (Object Relation Mapping)
-Create database table
+Engine string to connect to database
+```python
+mysql+pymysql://<username>:<password>@<host_name>:3306/<datbase_name>
+```
+
+Database table model
 ```python
 import datetime
 from sqlalchemy import Column, Integer, DateTime, String
@@ -42,7 +47,7 @@ from sqlalchemy.ext.declarative import declarative_base
 
 Base = declarative_base()
 
-Class NewTable(Base):
+class NewTable(Base):
   __tablename__ = "NewTable"
   pk = Column(Integer, primary_key=True)
   date = Column(DateTime, default=datetime.datetime.now())
