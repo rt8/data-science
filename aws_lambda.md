@@ -2,7 +2,7 @@
 
 Publish JSON data to SNS message.  This will pass the JSON data to another Lambda function that will be triggered by SNS subscription.
 ```python
-import boto
+import boto3
 import json
 client = boto3.client('sns')
 snsData = {}
@@ -20,7 +20,7 @@ print message
 
 This will enable a Lambda that was triggered by SNS subscription to retrieve JSON data contained in the SNS message. 
 ```python
-import boto
+import boto3
 import json
 def lambda_handler(event, context):
     jdata = json.loads(event['Records'][0]['Sns']['Message'])
