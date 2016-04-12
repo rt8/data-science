@@ -34,10 +34,6 @@ Use Python Boto library to update lambda function code
 import boto3
 import zipfile
 import sys
-import glob
-from StringIO import StringIO
-import os
-
 
 FUNC_NAME = sys.argv[1]
 ZIPFILE_PATH = sys.argv[2]
