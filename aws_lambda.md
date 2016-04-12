@@ -28,3 +28,34 @@ def lambda_handler(event, context):
     print v
     # "value"
 ```
+
+Use Python Boto library to update lambda function code
+```python
+import boto3
+import zipfile
+import sys
+import glob
+from StringIO import StringIO
+import os
+
+
+FUNC_NAME = sys.argv[1]
+ZIPFILE_PATH = sys.argv[2]
+
+print FUNC_NAME 
+print ZIPFILE_PATH
+
+client = boto3.client('lambda')
+with open(ZIPFILE_PATH, 'rb') as fp:
+    try:
+        zipdata = fp.read() 
+        print len(zipdata)
+        r = client.update_function_code(
+            FunctionName = FUNC_NAME,
+            ZipFile=zipdata,
+            )
+    except Exception as e:
+        print "error"
+        print e
+print "upload complete"
+```
