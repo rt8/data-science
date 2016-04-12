@@ -54,11 +54,11 @@ class NewTable(Base):
   fieldOne = Column(String(20)) 
 
   @classmethod
-  def new_itinerary(cls,new_res_id):
+  def new_itinerary(cls, textValue):
     engine = create_engine('ENGINE_STRING')
     Base.metadata.bind = engine
     session = sessionmaker(bind=engine) 
-    new_row = cls(fieldOne='someText')
+    new_row = cls(fieldOne=textValue)
     session.add(new_row)
     session.commit()
     session.close()
