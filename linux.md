@@ -19,5 +19,10 @@ https://api.address.com/resource \
 # Grep
 Find pattern in all files in this directory tree (recursively).
 ```bash
-$ grep -RI "<pattern" .
+$ grep -RI "<pattern>" .
+```
+To show surrounding lines use -A (lines after), -B (lines before), -C (surrounding lines)
+``` bash
+# show 2 lines before and after pattern found
+$ grep -C 2 -RI "<pattern>" .
 ```
