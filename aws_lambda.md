@@ -4,18 +4,19 @@ Publish JSON data to SNS message.  This will pass the JSON data to another Lambd
 ```python
 import boto3
 import json
-client = boto3.client('sns')
-snsData = {}
-snsData['default'] = "default message"
-snsData['item'] = value
-message = {'default': json.dumps(snsData)}
-r = client.publish(
-  TargetArn = '<enter sns arn>',
-  Message = json.dumps(message),
-  MessageStructure='json'
-)
-print message
-# {u'default': u'{"default": "default message", "item": "value"}'}
+def lambda_handler(event, context):
+  client = boto3.client('sns')
+  snsData = {}
+  snsData['default'] = "default message"
+  snsData['item'] = value
+  message = {'default': json.dumps(snsData)}
+  r = client.publish(
+    TargetArn = '<enter sns arn>',
+    Message = json.dumps(message),
+    MessageStructure='json'
+  )
+  print message
+  # {u'default': u'{"default": "default message", "item": "value"}'}
 ```
 
 This will enable a Lambda that was triggered by SNS subscription to retrieve JSON data contained in the SNS message. 
