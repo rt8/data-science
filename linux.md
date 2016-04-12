@@ -15,7 +15,7 @@ https://api.address.com/resource \
 
 #Cron
 Cron entry to run every 10 minutes and use flock to ensure only one instance is executed.  Also append logs to output file 
-```
+```bash
 # run every 10 minutes
 */10 * * * * flock - n /tmp/lockfile.lock /usr/bin/python script.py >> /var/log/project/logfile.log 2>&1
 ```
