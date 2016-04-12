@@ -32,8 +32,33 @@ print json.dumps(aJsonObject)
 
 
 # SQL Alchemy (Object Relation Mapping)
+Create database table
+```python
+import datetime
+from sqlalchemy import Column, Integer, DateTime, String
+from sqlalchemy import create_engine
+from sqlalchemy.orm import sessionmaker
+from sqlalchemy.ext.declarative import declarative_base
 
-# SQL Alembic
+Base = declarative_base()
+
+Class NewTable(Base):
+  __tablename__ = "NewTable"
+  pk = Column(Integer, primary_key=True)
+  date = Column(DateTime, default=datetime.datetime.now())
+  fieldOne = Column(String(20)) 
+
+  @classmethod
+  def new_itinerary(cls,new_res_id):
+    session = init_db_session() 
+    new_row = cls(fieldOne='someText')
+    session.add(new_row)
+    session.commit()
+    session.close()
+```
+
+
+# SQL Alembic (Database Schema Migrations)
 
 Check the version of current database schema
 ```bash
@@ -60,7 +85,7 @@ Reverse changes of migration script
 $ alembic downgrade -1
 ```
 
-# Pip
+# Pip (Package Management)
 ```bash
 $ pip install <SomePackage>             # install package
 $ pip show --files <SomePackage>        # list files installed for packaged
