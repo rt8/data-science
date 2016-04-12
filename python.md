@@ -59,3 +59,17 @@ Reverse changes of migration script
 ```bash
 $ alembic downgrade -1
 ```
+
+# Pip
+```bash
+$ pip install SomePackage				      # install package
+$ pip show --files SomePackage			  # list files installed for packaged
+$ pip list                            # list packages
+$ pip list --outdated					        # list old packages
+$ pip install --upgrade SomePackage		# update package
+$ pip uninstall SomePackage			      # uninstall package
+$ pip install -r requirements.txt			# import package dependencies
+
+
+```
+
