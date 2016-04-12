@@ -13,7 +13,7 @@ https://api.address.com/resource \
 -H "auth: token_value"
 ```
 
-#Cron
+#Cron (Automation Scheduler)
 Cron entry to run every 10 minutes and use flock to ensure only one instance is executed.  Also append logs to output file 
 ```bash
 # run every 10 minutes
@@ -28,7 +28,7 @@ crontab <filename>  # Push file contents into crontab.  This will overwrite ever
 # comments          # add comments to crontab
 ```
 
-# Grep
+# Grep (Search)
 Find pattern (ignore case) in file and redirect results to another file
 ```bash
 $ grep -I "<pattern>" <fileName> > results.txt
