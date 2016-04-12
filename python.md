@@ -54,7 +54,7 @@ class NewTable(Base):
   fieldOne = Column(String(20)) 
 
   @classmethod
-  def new_itinerary(cls, textValue):
+  def create_new_row(cls, textValue):
     engine = create_engine('ENGINE_STRING')
     Base.metadata.bind = engine
     session = sessionmaker(bind=engine) 
