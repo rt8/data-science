@@ -55,7 +55,9 @@ class NewTable(Base):
 
   @classmethod
   def new_itinerary(cls,new_res_id):
-    session = init_db_session() 
+    engine = create_engine('ENGINE_STRING')
+    Base.metadata.bind = engine
+    session = sessionmaker(bind=engine) 
     new_row = cls(fieldOne='someText')
     session.add(new_row)
     session.commit()
