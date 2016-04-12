@@ -34,7 +34,7 @@ print json.dumps(aJsonObject)
 # SQL Alchemy (Object Relation Mapping)
 Engine string to connect to database
 ```python
-mysql+pymysql://<username>:<password>@<host_name>:3306/<datbase_name>
+mysql+pymysql://<username>:<password>@<host_name>:3306/<database_name>
 ```
 
 Database table model
