@@ -21,7 +21,7 @@ Find pattern (ignore case) in file and redirect results to another file
 ```bash
 $ grep -I "<pattern>" <fileName> > results.txt
 ```
-Find pattern in all files in this directory tree (recursively).
+Find pattern in all files in current directory tree (recursively).
 ```bash
 $ grep -RI "<pattern>" .
 ```
