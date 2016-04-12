@@ -14,3 +14,10 @@ https://api.address.com/resource \
 ```
 
 #Cron
+
+
+# Grep
+Find pattern in all files in this directory tree (recursively).
+```bash
+$ grep -RI "<pattern" .
+```
