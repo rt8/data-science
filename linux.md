@@ -4,6 +4,7 @@
 
 Test REST API by post method.  
 Also shows verbose http communications, sends data, and uses http authentication headers.
+Also consider using httpie
 ```bash
 $ curl -v POST \
 https://api.address.com/resource \
