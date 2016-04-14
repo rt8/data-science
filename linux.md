@@ -15,12 +15,12 @@ https://api.address.com/resource \
 
 # httpie (alternative to Curl)
 To install
-```bash
+```sh
 $ sudo apt-get install httpie
 ```
 To redirect REST Web service to a text file.   
 For example, you want to retrieve a json object from API
-```bash
+```sh
 $ http -all \
 POST https://api.address.com/resource \ 
 header1:value \
@@ -30,7 +30,7 @@ body_field=value \
 ```
 
 To pretty print json object from REST Web service
-```bash
+```sh
 $ http -all \
 POST https://api.address.com/resource \ 
 header1:value \
