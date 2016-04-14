@@ -18,7 +18,7 @@ To install
 ```bash
 $ sudo apt-get install httpie
 ```
-To redirect REST Web service to a text file 
+To redirect REST Web service to a text file.   
 For example, you want to retrieve a json object from API
 ```bash
 $ http -all \
@@ -29,7 +29,7 @@ body_field=value \
 --print=b > filename.txt
 ```
 
-To pretty print json ojbect from REST Web service
+To pretty print json object from REST Web service
 ```bash
 $ http -all \
 POST https://api.address.com/resource \ 
