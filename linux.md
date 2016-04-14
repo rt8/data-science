@@ -42,7 +42,7 @@ body_field=value \
 
 #Cron (Automation Scheduler)
 Cron entry to run every 10 minutes and use flock to ensure only one instance is executed.  Also append logs to output file 
-```bash
+```{r, engine='bash', count_lines}
 # run every 10 minutes
 */10 * * * * flock - n /tmp/lockfile.lock /usr/bin/python script.py >> /var/log/project/logfile.log 2>&1
 ```
