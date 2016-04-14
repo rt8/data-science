@@ -13,6 +13,33 @@ https://api.address.com/resource \
 -H "auth: token_value"
 ```
 
+# httpie (alternative to Curl)
+To install
+```bash
+$ sudo apt-get install httpie
+```
+To redirect REST Web service to a text file 
+For example, you want to retrieve a json object from API
+```bash
+$ http -all \
+POST https://api.address.com/resource \ 
+header1:value \
+header2:value \
+body_field=value \
+--print=b > filename.txt
+```
+
+To pretty print json ojbect from REST Web service
+```bash
+$ http -all \
+POST https://api.address.com/resource \ 
+header1:value \
+header2:value \
+body_field=value \
+--print=b  | python -m json.tool | pygmentize -l javascript 
+```
+
+
 #Cron (Automation Scheduler)
 Cron entry to run every 10 minutes and use flock to ensure only one instance is executed.  Also append logs to output file 
 ```bash
