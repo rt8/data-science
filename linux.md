@@ -69,3 +69,12 @@ To show surrounding lines use -A (lines after), -B (lines before), -C (surroundi
 # show 2 lines before and after pattern found
 $ grep -C 2 -RI "<pattern>" .
 ```
+
+##sftp
+Using sftp in the command line.  
+```sh
+$ sftp username@hostname      # connect to sftp server
+> ls                          # list files in directory
+> get <remoteFileName>        # download file to local machine
+> cd <remoteDirectoryName>    # change directory
+```
