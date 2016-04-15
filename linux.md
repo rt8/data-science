@@ -70,7 +70,7 @@ To show surrounding lines use -A (lines after), -B (lines before), -C (surroundi
 $ grep -C 2 -RI "<pattern>" .
 ```
 
-#sFtp
+#sFTP
 Using sftp in the command line.  
 ```sh
 $ sftp username@hostname      # connect to sftp server
