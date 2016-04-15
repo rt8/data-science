@@ -2,7 +2,7 @@
 
 ## Setup EC2 Instance Store (ephemeral storage)
 All EC2 instances are provisioned with instance stores that provide "temporary" block storage for your instance.  
-These will be deleted when the EC2 instanced is stopped or terminated.  You should use Elastic Block Storage (EBS) if you need to save data when EC2 is stopped.
+These will be deleted when the EC2 instance is stopped or terminated.  You should use Elastic Block Storage (EBS) if you need to save data when EC2 is stopped.
 The instance stores are located on disks that are physically attached to the host computer.
 http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html
 
