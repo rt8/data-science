@@ -1,4 +1,4 @@
-# Amazone Elastic Compute (EC2)
+# Amazon Elastic Compute (EC2)
 
 ## Setup EC2 Instance Store (ephemeral storage)
 All EC2 instances are provisioned with instance stores that provide "temporary" block storage for your instance.  
