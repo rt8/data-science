@@ -2,27 +2,28 @@
 
 Tips and tricks for tools used for data science analysis and processing using Amazon Web Services (AWS) cloud infrastructure:
 
-- Python
+- **Python**
   - Requests
   - SQL Alchemy
   - Alembic
   - JSON
+  - XML
   - Exception Handling
   - Pip
   - Virtual Env
-- Pandas
+- **Pandas**
   - Conda
   - Jupyter Notebook
   - Pandas usage
   - Matplotlib (charts)
-- Linux 
+- **Linux**
   - Cron
   - Curl
   - Httpie
   - Grep
   - SFTP
-- Amazon Web Services
+- **Amazon Web Services**
   - Elastic Compute (EC2)
   - Lambda
-- Git
+- **Git**
 - MySQL
