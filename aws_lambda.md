@@ -2,12 +2,12 @@
 
 ## Lambda Design Pattern
 This design pattern achieves builds REST webservice with these attributes:
+- highly available
 - Asynchronous
 - scalable
-- event-driven
-- highly available
- 
+- event driven 
 
+ 
 1. Route 53
 2. API Gaetway (using https)
 3. Lambda (async front door to enqueue and writes message to SNS)
