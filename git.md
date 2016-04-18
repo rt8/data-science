@@ -47,7 +47,7 @@ Add an alias for a remote repo (eg. you want to push code to your fork before th
 $ git remote add <alias> <url>      # add a git URL as alias
 $ git fetch <alias>                 # download all branches from remote
 $ git merge <alias>/<branchName>    # merge current branch with remote branch 
-$ git push <aslia> <branch>         # upload local branch commits to remote branch
+$ git push <alias> <branch>         # upload local branch commits to remote branch
 $ git pull                          # fetch and merge commits from the tracking remote branch
 ```
 
