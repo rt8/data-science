@@ -19,6 +19,7 @@ $ git push <remoteName> <localBranchName>:<remoteBranchName>
 $ git pull <remoteName> <remoteBranchName>
 ```
 
+## Merge
 **Merge** branches that have conflicts
 ```bash
 $ git checkout -b <newBranch>
@@ -31,7 +32,7 @@ $ git push <remoteName> <remoteBranchName>
 ```
 
 
-
+## Squash
 **Squash** commits.  This means several commits are combined to look like 1 commit so the code history looks more tidy.
 ```bash
 $ git reset --soft head~2    #2 is the number of previous commits to squash
@@ -40,5 +41,13 @@ $ git push <remote> <branchName>
 $ git push <remote> +<branchName>    # add "+" symbol to force overwrite of remote git repo branch
 ```
 
-
+## Remotes
+Add an alias for a remote repo (eg. you want to push code to your fork before the main repo)
+```sh
+$ git remote add <alias> <url>      # add a git URL as alias
+$ git fetch <alias>                 # download all branches from remote
+$ git merge <alias>/<branchName>    # merge current branch with remote branch 
+$ git push <aslia> <branch>         # upload local branch commits to remote branch
+$ git pull                          # fetch and merge commits from the tracking remote branch
+```
 
