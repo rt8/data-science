@@ -1,6 +1,6 @@
 #Datascience 
 
-Tips and tricks for tools used for data science analysis and processing
+Tips and tricks for tools used for data science analysis and processing using Amazon Web Services (AWS) cloud infrastructure:
 
 - Python
   - Requests
