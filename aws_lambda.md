@@ -1,5 +1,22 @@
 # AWS Lambda 
 
+## Lambda Design Pattern
+This design pattern achieves builds REST webservice with these attributes:
+- Asynchronous
+- scalable
+- event-driven
+- highly available
+ 
+
+1. Route 53
+2. API Gaetway (using https)
+3. Lambda (async front door to enqueue and writes message to SNS)
+4. Simple Notification Service (triggers another Lambda to do processing)
+5. Lambda (retrieves message from SNS to do processing)
+6. output to RDS, Email, another REST web service ...
+
+
+## Update function code (Boto3)
 Use Python Boto library to update lambda function code
 ```python
 import boto3
