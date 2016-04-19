@@ -1,6 +1,6 @@
 #Linux
 
-#Curl
+##Curl
 
 Test REST API by post method.  
 Also shows verbose http communications, sends data, and uses http authentication headers.
@@ -13,7 +13,7 @@ https://api.address.com/resource \
 -H "auth: token_value"
 ```
 
-# httpie (alternative to Curl)
+## httpie (alternative to Curl)
 To install
 ```sh
 $ sudo apt-get install httpie
@@ -40,7 +40,7 @@ body_field=value \
 ```
 
 
-#Cron (Automation Scheduler)
+##Cron (Automation Scheduler)
 Cron entry to run every 10 minutes and use flock to ensure only one instance is executed.  Also append logs to output file 
 ```{r, engine='bash', count_lines}
 # run every 10 minutes
@@ -55,7 +55,25 @@ crontab <filename>  # Push file contents into crontab.  This will overwrite ever
 # comments          # add comments to crontab
 ```
 
-# Grep (Search)
+## Logrotate
+Rotate log files periodically before they get too big.
+
+Add logrotate configurations to `/etc/logrotate.conf`
+
+Below example will compress logs monthly and keep 12 months of logs.
+```sh
+/var/log/projectName/*.log {
+	monthly
+	rotate 12
+	compress
+	delaycompress
+	missingok
+	notifempty
+	create 644 root root
+}
+```
+
+## Grep (Search)
 Find pattern (ignore case) in file and redirect results to another file
 ```bash
 $ grep -I "<pattern>" <fileName> > results.txt
@@ -70,7 +88,7 @@ To show surrounding lines use -A (lines after), -B (lines before), -C (surroundi
 $ grep -C 2 -RI "<pattern>" .
 ```
 
-#sFTP
+##sFTP
 Using sftp in the command line.  
 ```sh
 $ sftp username@hostname      # connect to sftp server
