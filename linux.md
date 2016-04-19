@@ -60,10 +60,11 @@ Rotate log files periodically before they get too big.
 
 Add logrotate configurations to `/etc/logrotate.conf`
 
-Below example will compress logs monthly and keep 12 months of logs.
+Below example will compress logs every month and keep 12 months of logs.  Use `size` or `maxsize` option if you want to rotate logs when it reaches certain file size.
 ```sh
 /var/log/projectName/*.log {
 	monthly
+	size 100M
 	rotate 12
 	compress
 	delaycompress
