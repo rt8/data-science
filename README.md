@@ -19,9 +19,11 @@ Tips and tricks for tools used for data science analysis and processing using Am
 - **Linux**
   - Cron
   - Curl
+  - Log Rotate
   - Httpie
   - Grep
   - SFTP
+  - SSH
 - **Amazon Web Services**
   - Elastic Compute (EC2)
   - Lambda
