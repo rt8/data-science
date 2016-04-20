@@ -21,11 +21,11 @@ Code pattern for writing Lambda handlers
 import boto3
 import json
 def lambda_handler(event, context):
- try:
-  ... a block of code
-  return json.dumps({"result":"success", "message":"task completed"})
- except Exception e:
-  return json.dumps({"result": "fail", "message":"ERROR: %s" % str(e)})
+    try:
+        ... a block of code
+        return json.dumps({"result":"success", "message":"task completed"})
+    except Exception e:
+        return json.dumps({"result": "fail", "message":"ERROR: %s" % str(e)})
 ```
 
 ## Update function code (Boto3)
