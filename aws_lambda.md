@@ -24,7 +24,7 @@ def lambda_handler(event, context):
     try:
         ... a block of code
         return json.dumps({"result":"success", "message":"task completed"})
-    except Exception e:
+    except Exception as e:
         return json.dumps({"result": "fail", "message":"ERROR: %s" % str(e)})
 ```
 
