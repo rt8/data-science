@@ -15,6 +15,18 @@ This design pattern achieves builds REST webservice with these attributes:
 5. Lambda (retrieves message from SNS to do processing)
 6. output to RDS, Email, another REST web service ...
 
+## Lambda handler 
+Code pattern for writing Lambda handlers
+```python
+import boto3
+import json
+def lambda_handler(event, context):
+ try:
+  ... a block of code
+  return json.dumps({"result":"success", "message":"task completed"})
+ except Exception e:
+  return json.dumps({"result": "fail", "message":"ERROR: %s" % str(e)})
+```
 
 ## Update function code (Boto3)
 Use Python Boto library to update lambda function code
