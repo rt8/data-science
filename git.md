@@ -51,3 +51,18 @@ $ git push <alias> <branch>         # upload local branch commits to remote bran
 $ git pull                          # fetch and merge commits from the tracking remote branch
 ```
 
+##Stash
+Save changes in current working directory, to work on another software feature.  
+
+```sh
+$ git stash save "feature1 WIP"
+$ git stash list                    # show all stashed items
+$ git checkout master               # remember to do $ git pull
+$ git checkout -b feature2
+... finish working on feature2 and go back to feature1 branch ...
+$ git diff stash@{0}                # compare branch to stashed files
+$ git statsh pop                    # merge stash with current branch
+```
+`git stash pop` will retrieve stashed files and merge with current branch.
+You can also use `$ git stash branch <branchName>` to create a new branch from the stashed files.
+
