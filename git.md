@@ -66,3 +66,8 @@ $ git statsh pop                    # merge stash with current branch
 `git stash pop` will retrieve stashed files and merge with current branch.
 You can also use `$ git stash branch <branchName>` to create a new branch from the stashed files.
 
+##Undo Commits and Files
+```sh
+$ git reset --soft HEAD~            # undo last commit (becareful doing this if already pushed to remote repo)
+$ git reset HEAD <filename>         # remove file from staging already (ie. undo a file that was committed)
+```
