@@ -40,7 +40,31 @@ df.dtypes
 
 # use Grouper to group dataframe rows by time frequency (ie. monthly)
 df_grouped = df.groupby(pd.Grouper(key='datetimeColName', freq='M'), sort=False)
+```
 
+### Apply lambda functions
+```python 
+def somefunc(a):
+  pass
 
+def main():
+  ... some code...
+  df['colName'] = df['colName'].apply(lambdax x: somefunc(x))
+```
+
+### Split one column into 2 columns of the dataframe
+```python
+def splitName(a):
+  return a.split(' ')
+  
+def main():
+  ... some code...
+  df['car_brand'], df['car_model'] = zip(*df['car_fullname'].apply(lambda x: splitName(x)))
+```
+
+### Join Dataframes
+```python
+dflist = [df1, df2, df3]
+result = pd.concat(dflist)
 ```
 
