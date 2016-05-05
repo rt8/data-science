@@ -77,6 +77,7 @@ def main():
   ... some code...
   df['colName'] = df['colName'].apply(lambda x: somefunc(x))
   df['colName'] = df['colName'].apply(lambda x: x.capitalize())
+  df['colName'] = df.apply(lambda x: calcScore(x))
 ```
 
 ### Split one column into 2 columns of the dataframe
