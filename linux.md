@@ -55,6 +55,23 @@ crontab <filename>  # Push file contents into crontab.  This will overwrite ever
 # comments          # add comments to crontab
 ```
 
+## Supervisor (another useful automation tool)
+Keeps scripts, programs and tools running continuously.  
+
+```sh
+# edit supervisor and process worker configurations
+$ vi /etc/supervisor/conf.d/supervisord.project.conf
+
+# see the running status of all process workers
+$ sudo supervisorctl status
+
+# start all process workers
+$ sudo supervisorctl start all
+
+# stop all process workers
+$ sudo supervisorctl stop all
+```
+
 ## Logrotate
 Rotate log files periodically before they get too big.
 
