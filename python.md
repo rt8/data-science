@@ -141,3 +141,29 @@ $ python virtualenv.py myVE                                                     
 $ source bin/activate                                                                   # activate env dependencies
 $ deactivate                                                                            # deactivate env dependencies
 ```
+
+## sFTP
+Re-usable sFTP accounts object
+```python
+import pysftp
+
+class SFTP_Account:
+  def __init__(self, host, pw, user, port):
+    self.host = host
+    self.password = pw
+    self.username = user
+    self.port = port
+    
+  def _conn_info():
+    return {'host': self.host, 'username': self.username, 'password':self.password, 'port':self.port}
+    
+  # download file
+  def get(self, remotepath, localpath):
+    with pysftp.Connection(**_conn_info()) as sftp:
+      sftp.get(remotepath, localpath)
+  
+  # upload file
+  def put(self, localpath, remotepath):
+    with pysftp.Connection(**_conn_info()) as sftp:
+      sftp.put(localpath, remotepath)
+```
