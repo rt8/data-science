@@ -154,7 +154,7 @@ class SFTP_Account:
     self.username = user
     self.port = port
     
-  def _conn_info():
+  def _conn_info(self):
     return {'host': self.host, 'username': self.username, 'password':self.password, 'port':self.port}
     
   # download file
