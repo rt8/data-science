@@ -159,11 +159,11 @@ class SFTP_Account:
     
   # download file
   def get(self, remotepath, localpath):
-    with pysftp.Connection(**_conn_info()) as sftp:
+    with pysftp.Connection(**self._conn_info()) as sftp:
       sftp.get(remotepath, localpath)
   
   # upload file
   def put(self, localpath, remotepath):
-    with pysftp.Connection(**_conn_info()) as sftp:
+    with pysftp.Connection(**self._conn_info()) as sftp:
       sftp.put(localpath, remotepath)
 ```
